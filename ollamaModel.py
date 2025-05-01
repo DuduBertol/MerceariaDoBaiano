@@ -55,7 +55,7 @@ def ask_vegetable():
 
 @app.route('/')
 def index():
-    return send_from_directory(app.static_folder, 'index.html')
+    return send_from_directory(app.static_folder, 'ollama.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
