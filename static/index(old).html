@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>aula0428</title>
+    </head>
+    <body>
+        <form id="mform">
+            <label>Pais</label>
+            <input type="text" name="message" class="classe1">
+            <!-- tem que ser name message por conta do .py -->
+            <button type="submit">ENVIAR</button>
+        </form> 
+
+        <p id="resposta">...</p>
+
+
+
+
+    <script>
+        var meuform = document.getElementById("mform");
+        meuform.addEventListener("submit", e => {
+            e.preventDefault();
+            const formData = new FormData(meuform);
+            const data = Object.fromEntries(formData.entries());
+
+            fetch("http://127.0.0.1:5000/ask", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(respjson => {
+                var composta = `
+                <div>
+                    <p>País: ${respjson.name}</p>
+                    <p>Langs: ${respjson.languages}</p>
+                    <p>Capital: ${respjson.capital}</p>
+                </div>
+                `
+
+                document.getElementById("resposta").innerHTML = composta
+            })
+
+        });
+    </script>
+</body>
+</html>
+
