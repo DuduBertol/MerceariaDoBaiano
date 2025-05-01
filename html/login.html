@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aula24-03</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body{
+            background-color: #fffbda;
+        }
+
+        .center-page{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box{
+            border: 1px solid #bd9100;
+            border-radius: 5px;
+            background-color: #fff4c1;
+            margin: 20px;
+            padding: 20px;
+        }
+        
+
+        .style-margin input, button{
+            margin: 5px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="center-page">
+        <div>
+            <div class="box style-margin">
+                <h2>Welcome to Dudu's</h1>
+                <i>This is my sign up site!</i><br><br><br>
+                
+                <form id="form-login">
+                    <label for="user">Username:</label><br>
+                    <i class="fa-solid fa-user"></i> <input type="text" name="user" id="user" placeholder="Username"><br>
+
+                    <label for="pass">Password:</label><br>
+                    <i class="fa-solid fa-key"></i> <input type="password" name="pass" id="pass" placeholder="Password"><br>
+
+                    <button type="submit"><i class="fa-solid fa-right-to-bracket"></i> Login</button>
+                </form>
+                <p>No account yet? <a href="./singUp.html"> <i class="fa-solid fa-square-plus"></i> Create One!</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+            document.getElementById("form-login").addEventListener("submit", function(event) {
+                event.preventDefault();
+                const formData = new FormData(this);
+                const data = new URLSearchParams(formData);
+
+                fetch("/logar.php?" + data.toString(), {
+                    method: "GET"
+                })
+                .then(response => response.json())
+                .then(data => {
+                    alert(data.resposta);
+                })
+                .catch((error) => {
+                    console.error("Error", error);
+                })
+            });
+    </script>
+</body>
+</html>
