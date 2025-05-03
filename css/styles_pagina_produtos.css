@@ -4,7 +4,7 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
-    background-color: #eeeeee;
+    background-color: #c58b55;
     height: 100vh;
 }
 
@@ -12,8 +12,7 @@ body {
     padding: 15px;
     position: fixed;
     top: 0;
-    background-color: #175ab3;
-    border-bottom: 1px solid #8f8f8f;
+    background-color: #6e482f;
     display: flex;
     gap: 10%;
     justify-content: space-around;
@@ -49,7 +48,7 @@ body {
 .voltar p {
     margin: 0;
     font-weight: bold;
-    color: #175ab3;
+    color: #ffffff;
     cursor: pointer;
 }
 
@@ -109,7 +108,7 @@ body {
 .baiano-IA {
     margin-top: 20px;
     padding: 15px;
-    background-color: #eeeeee;
+    background-color: #c58b55;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -117,15 +116,20 @@ body {
 }
 
 .baiano-IA .titulo-baiano-IA{
+    color: white;
     font-weight: bold;
     font-size: 18px;
+}
+
+.baiano-IA .p-baiano-IA{
+    color: white;
 }
 
 /* CSS DO RODAPE */
 
 .footer {
     width: 100%;
-    background-color: #175ab3;
+    background-color: #6e482f;
     color: white;
     padding: 10px 0;
     text-align: center;
