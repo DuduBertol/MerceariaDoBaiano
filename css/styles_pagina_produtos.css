@@ -1,23 +1,62 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    background-color: #c58b55;
-    height: 100vh;
+    box-sizing: border-box;
 }
 
-.header {
-    padding: 15px;
-    top: 0;
-    position: absolute;
-    background-color: #6e482f;
+body {
+    background: url('../imagens/wood-pattern.png');
+    background-color: #e6c79c;
+    font-family: 'Quicksand', sans-serif;
+    overflow-x: hidden; /* impede rolagem horizontal da página toda */
+}
+
+header {
+    background-color: #9c6b30;
+    color: #fffaf0;
+    padding: 20px;
+    text-align: center;
+    font-family: 'Rye', cursive;
+    font-size: 28px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+nav {
+    background-color: #cfa66b;
     display: flex;
-    gap: 10%;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
+    justify-content: space-evenly;
+    padding: 10px;
+    gap: 30px;
+}
+
+nav a {
+text-decoration: none;
+color: #4a2e1c;
+font-weight: bold;
+}
+
+nav a:hover {
+text-decoration: underline;
+}
+
+.btn-voltar {
+    width: 100px;
+    height: 30px;
+    background-color: #d18b47;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 8px;
+    border-style: none;
+}
+
+.btn-voltar:hover {
+    background-color: #e49b58;
 }
 
 .logo {
@@ -154,7 +193,7 @@ body {
 }
 
 .preco-kg {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     color: #333;
     margin-left: 20px;
