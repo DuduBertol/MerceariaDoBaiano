@@ -1,74 +1,157 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Aula24-03</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>🧺 Mercearia do Baiano | Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rye&family=Quicksand&display=swap" rel="stylesheet">
 
     <style>
-        body{
-            background-color: #fffbda;
+        * { /* seleciona todos os elementos da página para tirar o margin e padding padrão dos elementos*/
+            margin: 0; 
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .center-page{
+        body{
+            background-image: url('../imagens/wood-pattern.png');
+            background-color: #d4a373;
             display: flex;
             justify-content: center;
             align-items: center;
+            height: 100vh; /* ocupa 100% da altura da janela */
+            background-size: 200px;
+            animation: bgmove 20s linear infinite; /*Aplica uma animação de movimento de fundo que dura 20 segundos e se repete infinitamente.*/
+            font-family: "Quicksand", sans-serif;
         }
 
-        .box{
-            border: 1px solid #bd9100;
-            border-radius: 5px;
-            background-color: #fff4c1;
+        @keyframes bgmove { /*regra do CSS que define uma animação chamada bgmove que faz o fundo "andar"*/
+            0% { background-position: 0 0; }
+            100% { background-position: 100px 100px; }
+        }
+
+        h1{
+            text-align: center;
+            color: #5e412f;
+            font-size: 30px;
+            font-family: "Rye", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        p{  /*Se achegue/ Ainda não possui uma conta?*/
+            font-family: "Quicksand", sans-serif;
+            color: #986c4f; 
+            margin-bottom: 20px;
+            font-style: italic;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        label{ /*Usuário/Senha*/
+            font-family: "Quicksand", sans-serif;
+            font-weight: 200;
+            font-style: normal;
+            color: #986c4f; 
+            margin-bottom: 20px;
+        }
+
+        i{ /*icones*/
+            color: #5e412f;
+        }
+
+        .box{ /*caixa central do formulário*/
+            background-image: url('../imagens/old-wall.png');
+            border: 3px solid rgb(129, 97, 67);
+            border-radius: 10px;
+            background-color: #f5ca75; 
             margin: 20px;
             padding: 20px;
+            width: 500px; 
+            box-shadow: 0 0 15px rgba(0,0,0,0.1); /*Sombra ao redor da caixa*/
+            box-sizing: border-box; /* Garante que padding e borda não ultrapassem os 100% */
         }
         
 
         .style-margin input, button{
             margin: 5px;
         }
+        
+        input {
+            width: 85%;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            background-color: #f5e6cc;            
+        }
+
+        input:focus { /*aparência do input quando ele ta em foco(clicado)*/
+            outline: none;
+            border: 2px solid #5e412f; /* marrom escuro */
+            box-shadow: 0 0 5px rgba(94, 65, 47, 0.4); /* brilho suave em marrom */        
+        }
+
+        button {
+            color: #4a2d18;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            font-family: "Quicksand", sans-serif;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px; /* espaço entre ícone e texto */
+            font-weight: 600;
+            background-color: #d18b47; 
+            margin-top: 10px;
+
+        }
+        button:hover {
+            background-color: #e49b58; /* tom um pouco mais claro no hover */
+            transform: scale(1.03);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        button:active { /*efeito visual quando clicar no botão*/
+            transform: scale(0.98);
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        a { /*estilo do link*/
+            color: #6b3e26; /* marrom médio */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover { /*linha em baixo do link*/
+            text-decoration: underline;
+            color: #a0522d;
+        }
 
     </style>
 </head>
 
 <body>
-    <div class="center-page">
-        <div>
-            <div class="box style-margin">
-                <h2>Welcome to Dudu's</h1>
-                <i>This is my sign up site!</i><br><br><br>
-                
-                <form id="form-login">
-                    <label for="user">Username:</label><br>
-                    <i class="fa-solid fa-user"></i> <input type="text" name="user" id="user" placeholder="Username"><br>
+    <div>
+        <div class="box style-margin">
+            <h1>Bem-vindo(a) à Mercearia do Baiano!</h1><br>
 
-                    <label for="pass">Password:</label><br>
-                    <i class="fa-solid fa-key"></i> <input type="password" name="pass" id="pass" placeholder="Password"><br>
+            <center><p>Se achegue, que aqui tem fartura!</p></center>
 
-                    <button type="submit"><i class="fa-solid fa-right-to-bracket"></i> Login</button>
-                </form>
-                <p>No account yet? <a href="./singUp.html"> <i class="fa-solid fa-square-plus"></i> Create One!</a></p>
-            </div>
+            <form id="form-login">
+            <label for="user">Usuário:</label><br>
+            <i class="fa-solid fa-user"></i> <input type="text" name="user" id="user" placeholder="Seu nome, cabra arretado!"><br>
+            
+            <label for="pass">Senha:</label><br>
+            <i class="fa-solid fa-key"></i> <input type="password" name="pass" id="pass" placeholder="Só entra com senha, visse?"><br>
+            
+            <center><button type="submit"><i class="fa-solid fa-right-to-bracket"></i> 
+                Bora comprar
+            </button></center>
+            </form>
+            <p>Ainda não possui uma conta? <a href="./singUp.html"><i class="fa-solid fa-square-plus"></i>Crie uma!</a></p>
         </div>
-    </div>
-
-    <script>
-            document.getElementById("form-login").addEventListener("submit", function(event) {
-                event.preventDefault();
-                const formData = new FormData(this);
-                const data = new URLSearchParams(formData);
-
-                fetch("/logar.php?" + data.toString(), {
-                    method: "GET"
-                })
-                .then(response => response.json())
-                .then(data => {
-                    alert(data.resposta);
-                })
-                .catch((error) => {
-                    console.error("Error", error);
-                })
-            });
-    </script>
+    </div> 
 </body>
 </html>
