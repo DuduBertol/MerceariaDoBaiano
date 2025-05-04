@@ -1,50 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Aula24-03</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-    <!--Professor, sei que poderia colocar isso num .css ao invés de copiar e colar nos dois arquivos, mas para facilitar a correção, incluí como <style> nesse .html -->>
-    <style>
-        body{
-            background-color: #fffbda;
-        }
-
-        .center-page{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .box{
-            border: 1px solid #bd9100;
-            border-radius: 5px;
-            background-color: #fff4c1;
-            margin: 20px;
-            padding: 20px;
-        }
-
-        .style-margin input, button{
-            margin: 5px;
-        }
-
-    </style>
+    <title>🧺 Mercearia do Baiano | Cadastro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rye&family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles_login.css">
 </head>
-<body>
-    <div class="center-page">
-        <div>
-            <div class="box style-margin">
-                <h2>Create New Account</h1>
-                <i>Type here your data!</i><br><br><br>
 
-                <i class="fa-solid fa-user"></i> <input type="text" placeholder="Name"><br>
-                <i class="fa-solid fa-signature"></i> <input type="password" placeholder="Surname"><br>
-                <i class="fa-solid fa-calendar-days"></i> <input type="date"><br>
-                <i class="fa-solid fa-key"></i> <input type="password" placeholder="Password"><br>
-                <i class="fa-solid fa-key"></i> <input type="password" placeholder="Confirm Password"><br>
-                <button><i class="fa-solid fa-right-to-bracket"></i> Sign me up!!!</button> <a href="./login.html">Cancel</a>
-            </div>
+<body>
+    <div>
+        <div class="box style-margin">
+            <h1>Cadastre-se na Mercearia do Baiano</h1><br>
+            <center><p>Bote seu nome aqui e venha se juntar à festança!</p></center>
+
+            <form id="form-cadastro">
+                <label for="nome">Seu nome:</label><br>
+                <i class="fa-solid fa-user"></i> <input type="text" id="nome" name="nome" placeholder="Diga aí como se chama"><br>
+
+                <label for="sobrenome">Sobrenome:</label><br>
+                <i class="fa-solid fa-signature"></i> <input type="text" id="sobrenome" name="sobrenome" placeholder="E o sobrenome, cabra?"><br>
+
+                <label for="nascimento">Nascimento:</label><br>
+                <i class="fa-solid fa-calendar-days"></i> <input type="date" id="nascimento" name="nascimento"><br>
+
+                <label for="senha">Crie uma senha:</label><br>
+                <i class="fa-solid fa-key"></i> <input type="password" id="senha" name="senha" placeholder="Escolha uma senha das boas"><br>
+
+                <label for="confirmar">Confirme a senha:</label><br>
+                <i class="fa-solid fa-key"></i> <input type="password" id="confirmar" name="confirmar" placeholder="Repita a bichinha aí"><br>
+
+                <center>
+                    <button type="submit">
+                        <i class="fa-solid fa-user-plus"></i> Me cadastre, visse!
+                    </button>
+                </center>
+            </form>
+
+            <p>Já tem conta, homi/mulher? <a href="./login.html"><i class="fa-solid fa-right-to-bracket"></i> Vá pro login</a></p>
         </div>
     </div>
+    <script src="../js/cadastro.js"></script>
 </body>
 </html>
