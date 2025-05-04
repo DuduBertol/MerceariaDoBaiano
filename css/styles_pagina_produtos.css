@@ -10,8 +10,8 @@ body {
 
 .header {
     padding: 15px;
-    position: fixed;
     top: 0;
+    position: absolute;
     background-color: #6e482f;
     display: flex;
     gap: 10%;
@@ -65,7 +65,7 @@ body {
 }
 
 .imagem-produto img {
-    width: 250px;
+    width: 430px;
     border-radius: 8px;
 }
 
@@ -81,6 +81,7 @@ body {
 }
 
 .info-produto p {
+    margin: 0;
     font-size: 16px;
     color: #333;
 }
@@ -125,26 +126,36 @@ body {
     color: white;
 }
 
-/* CSS DO RODAPE */
+/* Estilização da parte do preço em kg */
 
-.footer {
-    width: 100%;
-    background-color: #6e482f;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-    margin-top: 100px;
-    position: fixed;
-    bottom: 0;
-    font-size: 14px;
+.container-preco {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
 }
 
-.footer a {
-    text-decoration: none;
+.input-quantidade {
+    width: 80px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.btn-calcular-preco {
+    padding: 10px 20px;
+    background-color: #28a745;
     color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.preco-kg {
+    font-size: 18px;
     font-weight: bold;
-}
-
-.footer a:hover {
-    text-decoration: underline;
+    color: #333;
+    margin-left: 20px;
 }
