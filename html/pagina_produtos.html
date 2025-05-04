@@ -1,9 +1,11 @@
 <html>
+
 <head>
     <link rel="stylesheet" href="../css/styles_pagina_produtos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Produto</title>
 </head>
+
 <body>
     <div class="header">
         <div class="logo"><i class="fa-solid fa-shop"></i> Mercearia do Baiano</div>
@@ -20,26 +22,29 @@
 
     <div class="conteudo">
         <div class="imagem-produto">
-            <img src="caminho/da/imagem">
+            <img src="">
         </div>
+
         <div class="info-produto">
             <h1>Nome do Produto</h1>
-            <p>Aqui vamos colocar uma breve descrição do produto, no caso, vamos
-                fazer isso com template string pra cada produto diferente.
-            </p>
-            <button class="btn-comprar">Comprar</button>
+            <p>Aqui vamos colocar uma breve descrição do produto, no caso, vamos fazer isso com template string para
+                cada produto diferente.</p>
+            <div class="container-preco">
+                <input type="number" class="input-quantidade" id="quantidade"
+                    placeholder="Digite a quantidade (em gramas)">
+                <button type="button" class="btn-calcular-preco" id="calcularPreco">Calcular preço</button>
+                <p class="preco-kg"></p>
+            </div>
+            <button class="btn-comprar" type="submit">Comprar</button>
             <div class="baiano-IA">
                 <p class="titulo-baiano-IA">Saiba mais sobre esse produto com a nossa Inteligência Artificial!</p>
                 <button class="btn-baiano"><i class="fa-solid fa-microchip"></i> Saiba mais!</button>
                 <p class="p-baiano-IA">Aguardando...</p>
             </div>
-
         </div>
     </div>
 
-    <div class="footer">
-        <p>&copy; 2025 Mercearia do Baiano. Todos os direitos reservados.</p>
-        <p><a href="">Política de Privacidade</a> | <a href="">Termos de Serviço</a></p>
-    </div>
+    <script src="../js/pagina_produtos.js"></script>
 </body>
+
 </html>
