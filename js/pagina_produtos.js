@@ -107,8 +107,8 @@ const produtos = [
     },
     {
         id: 15,
-        nome: "Xuxu",
-        descricao: "Xuxu verde claro, leve e saudável.",
+        nome: "Chuchu",
+        descricao: "Chuchu verde claro, leve e saudável.",
         imagem: "../assets/xuxu.png",
         precoPorKg: 4.90
     },
