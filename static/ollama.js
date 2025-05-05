@@ -33,4 +33,5 @@ var meuform = document.getElementById("mform");
                 `
                 document.getElementById("resposta").innerHTML = composta
             });
+            //.catch(console.error());
         });
