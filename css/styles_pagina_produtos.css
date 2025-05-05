@@ -77,11 +77,11 @@ text-decoration: underline;
 }
 
 .voltar {
-    margin-top: 5.5%;
+    margin-top: 10px;
     width: 80%;
     display: flex;
     justify-content: flex-start;
-    margin-bottom: 20px;
+    margin-left: 10px;
 }
 
 .voltar p {
@@ -92,11 +92,19 @@ text-decoration: underline;
 }
 
 /* ESTILIZAÇÃO DO CONTEUDO CENTRAL COM O PRODUTO */
+.conteudo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .conteudo {
-    position: absolute;
+    position: relative;
     width: 80%;
-    margin-top: 8%;
-    background-color: #ffffff;
+    margin-top: 10px;
+    background-color: #fff5c2;
+    border: 3px solid #c29e6c;
+    border-radius: 10px;
     padding: 30px;
     gap: 40px;
     display: flex;
@@ -175,7 +183,7 @@ text-decoration: underline;
 }
 
 .input-quantidade {
-    width: 80px;
+    width: 280px;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -198,3 +206,11 @@ text-decoration: underline;
     color: #333;
     margin-left: 20px;
 }
+
+footer {
+    background-color: #9c6b30;
+    color: #fffaf0;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    }
