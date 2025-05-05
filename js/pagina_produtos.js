@@ -150,10 +150,11 @@ const produtos = [
         precoFixo: 7.90
     }
 ];
-
+//Pega o parâmetro id da URL e converte esse id em número inteiro
 const params = new URLSearchParams(window.location.search);
 const id = parseInt(params.get("id"));
 
+//Usa .find() para buscar o produto que tem o mesmo id passado na URL
 const produto = produtos.find(p => p.id === id);
 
 if (produto) {
