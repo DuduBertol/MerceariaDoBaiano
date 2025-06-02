@@ -16,19 +16,38 @@ var meuform = document.getElementById("mform");
 
                 var composta = `
                 <div>
-                    <p>NOME - ${respjson.nome}</p>
+
+                    <h1>${respjson.nome}</h1>
                     
-                    <p>TIPO - ${respjson.tipo}</p>
+                    <div class="campo">
+                    <p class="title">TIPO</p>
+                    <p class="resp">${respjson.tipo}</p>
+                    </div>
                     
-                    <p>ORIGEM - ${respjson.origem}</p>
+                    <div class="campo">
+                    <p class="title">ORIGEM</p>
+                    <p class="resp">${respjson.origem}</p>
+                    </div>
                     
-                    <p>ESTACAO - ${respjson.sazonalidade}</p>
+                    <div class="campo">
+                    <p class="title">ESTACAO</p>
+                    <p class="resp">${respjson.sazonalidade}</p>
+                    </div>
                     
-                    <p>TEMPO DE CRESCIMENTO - ${respjson.mesesdecrescimento}</p>
+                    <div class="campo">
+                    <p class="title">TEMPO DE CRESCIMENTO</p>
+                    <p class="resp">${respjson.mesesdecrescimento}</p>
+                    </div>
                     
-                    <p>SABOR - ${respjson.sabor}</p>
+                    <div class="campo">
+                    <p class="title">SABOR</p>
+                    <p class="resp">${respjson.sabor}</p>
+                    </div>
                     
-                    <p>VITAMINAS - ${respjson.vitaminas}</p>
+                    <div class="campo">
+                    <p class="title">VITAMINAS</p>
+                    <p class="resp">${respjson.vitaminas}</p>
+                    </div>
                 </div>
                 `
                 document.getElementById("resposta").innerHTML = composta

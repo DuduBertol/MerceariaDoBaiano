@@ -28,7 +28,7 @@ def ask_vegetable():
     # Chamar o modelo
     response = chat(
         messages=[
-            {'role': 'system', 'content': 'Você é um especialista em vegetais. Responda apenas com JSON válido no formato especificado.oce'},
+            {'role': 'system', 'content': 'Você é um especialista em vegetais. Responda apenas com JSON válido no formato especificado'},
             {'role': 'user', 'content': user_message}
         ],
         #role: pode ser "user", "assistant" ou "system"
