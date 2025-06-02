@@ -31,14 +31,20 @@ body {
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2)
 }
 
-.classe1 {
+
+
+.c_body {
     background-color: seagreen;
     color: aquamarine;
     margin: 10px
 }
-.classe2 {
+.c_placeholder {
     background-color: #d0fdde;
 }
+
+
+
+
 .resposta {
     align-items: center;
     color: white;
@@ -47,11 +53,6 @@ body {
 .resposta p {
     max-width: 50ch;
 }
-
-/* .resposta b {
-    padding: 5px;
-    background-color: #51aa5a;
-} */
 
 .title {
     font-weight: bold;
