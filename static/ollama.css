@@ -21,15 +21,54 @@ body {
     border: 3px, solid, rgb(36, 64, 33);
 }
 
-.classe1 {
+#mform button:hover {
+    background-color: #92d499;
+}
+
+#mform button:active {
+    background-color: #3e8e41;
+  transform: translateY(2px) scale(0.98);
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.2)
+}
+
+
+
+.c_body {
     background-color: seagreen;
     color: aquamarine;
     margin: 10px
 }
-.classe2 {
+.c_placeholder {
     background-color: #d0fdde;
 }
+
+
+
+
 .resposta {
     align-items: center;
     color: white;
-} 
+}
+
+.resposta p {
+    max-width: 50ch;
+}
+
+.title {
+    font-weight: bold;
+    padding: 5px;
+    background-color: #51aa5a;
+    margin: 0px;
+}
+
+.resp {
+    margin: 0px;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+
+.campo div {
+    margin: 10px;
+}

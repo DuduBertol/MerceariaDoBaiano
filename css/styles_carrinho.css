@@ -1,0 +1,219 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: url('../imagens/wood-pattern.png');
+        background-color: #e6c79c;
+        font-family: 'Quicksand', sans-serif;
+    }
+
+    header {
+        background-color: #9c6b30;
+        color: #fffaf0;
+        padding: 20px;
+        text-align: center;
+        font-family: 'Rye', cursive;
+        font-size: 28px;
+    }
+
+    nav {
+        background-color: #cfa66b;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 10px;
+        gap: 30px; /*Espaçamento fixo entre os itens*/
+    }
+
+    nav a { /*cor link*/
+        text-decoration: none;
+        color: #4a2e1c;
+        font-weight: bold;
+    }
+
+    nav a:hover {
+    text-decoration: underline;
+    }
+
+    footer {
+        background-color: #9c6b30;
+        color: #fffaf0;
+        text-align: center;
+        padding: 15px;
+        margin-top: 20px;
+    }
+
+    .titulo_carrinho {
+        padding: 20px 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-family: 'Rye', cursive;
+        font-size: 28px;
+    }
+
+    .conteudo-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .conteudo {
+        position: relative;
+        width: 80%;
+        margin-top: 10px;
+        background-color: #fff5c2;
+        border: 3px solid #c29e6c;
+        border-radius: 10px;
+        padding: 30px;
+        gap: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    section {
+        width: 70%;
+    }
+
+    .tabela_carrinho {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .tabela_carrinho thead tr {
+        border-bottom: 3px solid #c29e6c;
+    }
+
+    .tabela_carrinho thead th{
+        text-align: left;
+        text-transform: uppercase;
+        padding-bottom: 10px;
+    }
+
+    .tabela_carrinho tbody td {
+        padding: 20px 0;
+    }
+
+    .tabela_carrinho tbody tr {
+        border-bottom: 3px solid #c29e6c;
+    }
+
+    .tabela_carrinho tbody tr:last-child {
+        border: 0;
+    }
+
+    .produto {
+        display: flex;
+        align-items: center;
+    }
+    .produto img {
+        border-radius: 10px;
+    }
+
+    .info {
+        margin-left: 20px;
+    }
+
+    .name {
+        font-size: 18px;
+        font-weight: bold;
+        color: black;
+    }
+
+    .category {
+        font-size: 16px;
+        color: rgb(36, 36, 36);
+    }
+
+    .remover_produto {
+        background: #cfa66b;
+        border: 0;
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+    }
+
+    .remover_produto:hover{
+        background: #b39061;
+        cursor: pointer;
+    }
+
+    .qty {
+        background: #cfa66b;
+        display: inline-flex;
+        justify-content: space-around;
+        align-items: center;
+        min-width: 60px;
+        border-radius: 15px;
+        overflow: hidden;
+        height: 30px;
+    }
+
+    span {
+        margin: 0 10px;
+    }
+    
+    .qty button {
+        display: flex;
+        align-items: center;
+        background: transparent;
+        border: 0;
+        padding: 0 10px;
+        font-size: 18px;
+        height: 100%;
+    }
+
+    .qty button:hover {
+        background: #b39061;
+    }
+
+    aside {
+        width: 30%;
+    }
+
+    aside .box {
+        margin-bottom: 15px;
+        background-color: #cfa66b;
+    }
+    aside button {
+        background-color: rgb(133, 219, 76);
+        display: block;
+        width: 100%;
+        height: 40px;
+        border-radius: 15px;
+        border: 0;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    aside .header_box {
+        padding: 15px 20px;
+        font-size: 16px;
+        color: #4a2e1c;
+        background-color: #cfa66b;
+        border-bottom: 1px solid #a78556;
+    }
+
+    aside .info_box {
+        padding: 20px;
+    }
+
+    aside .info_box div {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+    
+    aside .footer_box {
+        padding: 15px 20px;
+        background-color: #b48c53;
+        font-weight: bold;
+    }
