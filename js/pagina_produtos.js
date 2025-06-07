@@ -5,6 +5,7 @@ const produtos = [
         nome: "Salame Defumado",
         descricao: "Salame artesanal defumado com especiarias.",
         imagem: "../assets/salame.png",
+        categoria: "Defumados",
         precoPorKg: 95.90
     },
     {
@@ -12,6 +13,7 @@ const produtos = [
         nome: "Bacon Defumado",
         descricao: "Bacon defumado crocante e saboroso.",
         imagem: "../assets/bacon.png",
+        categoria: "Defumados",
         precoPorKg: 46.90
     },
     {
@@ -19,13 +21,15 @@ const produtos = [
         nome: "Presunto Defumado",
         descricao: "Presunto defumado premium.",
         imagem: "../assets/presunto.png",
+        categoria: "Defumados",
         precoPorKg: 38.90
     },
     {
         id: 4,
-        nome: "Linguiça Calabresa",
+        nome: "Linguiça Calabresa - 400g",
         descricao: "Linguiça calabresa defumada ideal para pratos típicos.",
         imagem: "../assets/calabresa.png",
+        categoria: "Defumados",
         precoFixo: 12.90
     },
 
@@ -35,6 +39,7 @@ const produtos = [
         nome: "Mussarela Defumada",
         descricao: "Mussarela defumada ideal para lanches.",
         imagem: "../assets/mussarela.png",
+        categoria: "Queijos",
         precoPorKg: 54.90
         
     },
@@ -43,6 +48,7 @@ const produtos = [
         nome: "Gouda Defumado",
         descricao: "Gouda com toque defumado e textura cremosa.",
         imagem: "../assets/gouda.png",
+        categoria: "Queijos",
         precoPorKg: 88.90
     },
     {
@@ -50,6 +56,7 @@ const produtos = [
         nome: "Provolone Defumado",
         descricao: "Queijo provolone defumado, sabor intenso.",
         imagem: "../assets/provolone.png",
+        categoria: "Queijos",
         precoPorKg: 113.90
     },
     {
@@ -57,6 +64,7 @@ const produtos = [
         nome: "Parmesão Defumado",
         descricao: "Parmesão curado com defumação natural.",
         imagem: "../assets/parmesao.png",
+        categoria: "Queijos",
         precoPorKg: 169.90
     },
 
@@ -66,6 +74,7 @@ const produtos = [
         nome: "Chimichurri Defumado",
         descricao: "Tempero argentino com toque defumado.",
         imagem: "../assets/chimichurri.png",
+        categoria: "Queijos",
         precoPorKg: 79.90
     },
     {
@@ -73,6 +82,7 @@ const produtos = [
         nome: "Páprica Defumada",
         descricao: "Páprica doce defumada ideal para carnes.",
         imagem: "../assets/paprica.png",
+        categoria: "Queijos",
         precoPorKg: 19.90
     },
     {
@@ -80,6 +90,7 @@ const produtos = [
         nome: "Fumaça em Pó",
         descricao: "Aromatizante defumado para churrasco e molhos.",
         imagem: "../assets/fumaca.png",
+        categoria: "Queijos",
         precoPorKg: 20.90
     },
     {
@@ -87,6 +98,7 @@ const produtos = [
         nome: "Sal de Parrilla Defumado",
         descricao: "Sal grosso com aroma defumado.",
         imagem: "../assets/sal-parrilla.png",
+        categoria: "Queijos",
         precoPorKg: 29.90
     },
 
@@ -96,6 +108,7 @@ const produtos = [
         nome: "Tomate",
         descricao: "Tomates frescos direto do campo.",
         imagem: "../assets/tomate.png",
+        categoria: "Frutas e Verduras",
         precoPorKg: 7.90
     },
     {
@@ -103,6 +116,7 @@ const produtos = [
         nome: "Cenoura",
         descricao: "Cenouras crocantes e nutritivas.",
         imagem: "../assets/cenoura.png",
+        categoria: "Frutas e Verduras",
         precoPorKg: 6.90
     },
     {
@@ -110,6 +124,7 @@ const produtos = [
         nome: "Chuchu",
         descricao: "Chuchu verde claro, leve e saudável.",
         imagem: "../assets/xuxu.png",
+        categoria: "Frutas e Verduras",
         precoPorKg: 4.90
     },
     {
@@ -117,6 +132,7 @@ const produtos = [
         nome: "Banana",
         descricao: "Bananas maduras e saborosas.",
         imagem: "../assets/banana.png",
+        categoria: "Frutas e Verduras",
         precoPorKg: 8.90
     },
 
@@ -126,6 +142,7 @@ const produtos = [
         nome: "Pão de Fermentação Natural",
         descricao: "Pão artesanal com longa fermentação.",
         imagem: "../assets/pao-natural.png",
+        categoria: "Frutas e Verduras",
         precoFixo: 12.90
     },
     {
@@ -133,6 +150,7 @@ const produtos = [
         nome: "Baguete Italiana",
         descricao: "Baguete crocante ao estilo italiano.",
         imagem: "../assets/baguete.png",
+        categoria: "Frutas e Verduras",
         precoFixo: 11.90
     },
     {
@@ -140,6 +158,7 @@ const produtos = [
         nome: "Ciabatta",
         descricao: "Pão rústico com casca crocante.",
         imagem: "../assets/ciabatta.png",
+        categoria: "Frutas e Verduras",
         precoFixo: 7.90
     },
     {
@@ -147,6 +166,7 @@ const produtos = [
         nome: "Pão Australiano",
         descricao: "Pão escuro levemente adocicado.",
         imagem: "../assets/australiano.png",
+        categoria: "Frutas e Verduras",
         precoFixo: 7.90
     }
 ];
@@ -156,6 +176,8 @@ const id = parseInt(params.get("id"));
 
 //Usa .find() para buscar o produto que tem o mesmo id passado na URL
 const produto = produtos.find(p => p.id === id);
+
+let precoCalculado = null;  // variável global para armazenar preço calculado
 
 if (produto) {
     document.querySelector('.imagem-produto img').src = produto.imagem;
@@ -170,22 +192,23 @@ if (produto) {
     if (produto.precoFixo) {
         precoKg.textContent = `Preço fixo: R$ ${produto.precoFixo.toFixed(2)}`;
         containerPreco.style.display = 'none';
+        precoCalculado = produto.precoFixo;  // já tem preço fixo disponível
     } else {
         calcularPrecoButton.addEventListener('click', function() {
             const quantidadeGramas = parseFloat(quantidadeInput.value);
-            
+
             if (!isNaN(quantidadeGramas) && quantidadeGramas > 0) {
-                const precoTotal = (produto.precoPorKg * quantidadeGramas) / 1000;
-                precoKg.textContent = `Preço para ${quantidadeGramas}g: R$ ${precoTotal.toFixed(2)}`;
+                precoCalculado = (produto.precoPorKg * quantidadeGramas) / 1000;
+                precoKg.textContent = `Preço para ${quantidadeGramas}g: R$ ${precoCalculado.toFixed(2)}`;
             } else {
                 precoKg.textContent = "Por favor, insira uma quantidade válida em gramas.";
+                precoCalculado = null;  // reseta o preço calculado
             }
         });
     }
 } else {
     document.querySelector('.conteudo').innerHTML = "<p>Produto não encontrado.</p>";
 }
-
 
 document.getElementById("btn-voltar").addEventListener("click", function () {
     window.location.href = "./pagina_inicial.html";
@@ -194,3 +217,69 @@ document.getElementById("btn-voltar").addEventListener("click", function () {
 document.getElementById("btn-baiano").addEventListener("click", function () {
     window.location.href = "http://127.0.0.1:5000";
 });
+
+document.getElementById("btn-comprar").addEventListener("click", function() {
+    if (produto.precoFixo) {
+        adicionaAoCarrinho(precoCalculado, 1);
+    } else {
+        const quantidadeGramas = parseFloat(document.getElementById("quantidade").value);
+        if (!precoCalculado) {
+            alert("Por favor, calcule o preço antes de adicionar ao balaio.");
+            return;
+        }
+        if (isNaN(quantidadeGramas) || quantidadeGramas <= 0) {
+            alert("Digite uma quantidade válida em gramas.");
+            return;
+        }
+        adicionaAoCarrinho(precoCalculado, quantidadeGramas);
+    }
+});
+
+function adicionaAoCarrinho() {
+    let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+    const quantidadeGramas = parseFloat(document.getElementById("quantidade").value);
+    let quantidadeFinal = 1;
+    let precoUnitario = 0;
+    let total = 0;
+
+    if (produto.precoFixo) {
+        precoUnitario = produto.precoFixo;
+        total = precoUnitario;
+    } else {
+        if (isNaN(quantidadeGramas) || quantidadeGramas <= 0) {
+            alert("Digite uma quantidade válida em gramas.");
+            return;
+        }
+        precoUnitario = produto.precoPorKg;
+        quantidadeFinal = quantidadeGramas;
+        total = (precoUnitario * quantidadeGramas) / 1000;
+    }
+
+    const indexItemExistente = carrinho.findIndex(item => item.id === produto.id);
+
+    if (indexItemExistente > -1) {
+        carrinho[indexItemExistente].quantidade += quantidadeFinal;
+        carrinho[indexItemExistente].total += total;
+
+        carrinho[indexItemExistente].total = parseFloat(carrinho[indexItemExistente].total.toFixed(2));
+    } else {
+        const item = {
+            id: produto.id,
+            nome: produto.nome,
+            imagem: produto.imagem,
+            categoria: produto.categoria,
+            precoUnitario: precoUnitario,
+            quantidade: quantidadeFinal,
+            total: parseFloat(total.toFixed(2)),
+            tipoPreco: produto.precoFixo ? "fixo" : "porKg"
+        };
+
+        carrinho.push(item);
+    }
+
+    localStorage.setItem("carrinho", JSON.stringify(carrinho));
+
+    alert("Produto adicionado ao balaio com sucesso!");
+    console.log("Carrinho atualizado:", carrinho); // pra testar
+}
