@@ -206,6 +206,9 @@ if (produto) {
             }
         });
     }
+    if (produto.categoria === "Frutas e Verduras") {
+        document.querySelector('.baiano-IA').style.display = 'block';
+    }
 } else {
     document.querySelector('.conteudo').innerHTML = "<p>Produto não encontrado.</p>";
 }

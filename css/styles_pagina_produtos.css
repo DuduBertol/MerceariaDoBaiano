@@ -108,11 +108,11 @@ text-decoration: underline;
     padding: 30px;
     gap: 40px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 .imagem-produto img {
-    width: 430px;
+    width: 350px;
     border-radius: 8px;
 }
 
@@ -135,7 +135,6 @@ text-decoration: underline;
 
 .btn-comprar,
 .btn-baiano {
-    width: 200px;
     padding: 10px 20px;
     border: none;
     border-radius: 6px;
@@ -146,20 +145,25 @@ text-decoration: underline;
 .btn-comprar {
     background-color: #175ab3;
     color: white;
+    width: 200px;
 }
 
 .btn-baiano {
-    background-color: #bd1515;
+    background-color: #28a745;
     color: #ffffff;
+    width: 300px;
+    margin-top: 20px;
 }
 
 .baiano-IA {
     margin-top: 20px;
     padding: 15px;
-    background-color: #c58b55;
+    background-color: #c29e6c;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 10px;
 }
 
