@@ -5,7 +5,7 @@
     }
 
     body {
-        background: url('../imagens/wood-pattern.png');
+        background: url('../assets/geral/wood-pattern.png');
         background-color: #e6c79c;
         font-family: 'Quicksand', sans-serif;
     }
@@ -46,7 +46,7 @@
 
     .intro-img {
         flex: 1; /* Ocupa metade do espaço */
-        background-image: url('../imagens/largo_ordem.png.png'); 
+        background-image: url('../assets/geral/largo_ordem.png'); 
         background-size: cover; /* A imagem cobre toda a área */
         background-position: center; /* Centraliza a imagem */
     }
