@@ -28,7 +28,7 @@ const produtos = [
         id: 4,
         nome: "Linguiça Calabresa - 400g",
         descricao: "Linguiça calabresa defumada ideal para pratos típicos.",
-        imagem: "../assets/calabresa.png",
+        imagem: "../assets/linguica.png",
         categoria: "Defumados",
         precoFixo: 12.90
     },
@@ -71,18 +71,18 @@ const produtos = [
     // LISTA DOS DEFUMADOS - TEMPEROS
     {
         id: 9,
-        nome: "Chimichurri Defumado",
+        nome: "Chimichurri",
         descricao: "Tempero argentino com toque defumado.",
-        imagem: "../assets/chimichurri.png",
-        categoria: "Queijos",
+        imagem: "../assets/chimi.png",
+        categoria: "Temperos",
         precoPorKg: 79.90
     },
     {
         id: 10,
         nome: "Páprica Defumada",
         descricao: "Páprica doce defumada ideal para carnes.",
-        imagem: "../assets/paprica.png",
-        categoria: "Queijos",
+        imagem: "../assets/paprica_def.png",
+        categoria: "Temperos",
         precoPorKg: 19.90
     },
     {
@@ -90,15 +90,15 @@ const produtos = [
         nome: "Fumaça em Pó",
         descricao: "Aromatizante defumado para churrasco e molhos.",
         imagem: "../assets/fumaca.png",
-        categoria: "Queijos",
+        categoria: "Temperos",
         precoPorKg: 20.90
     },
     {
         id: 12,
         nome: "Sal de Parrilla Defumado",
         descricao: "Sal grosso com aroma defumado.",
-        imagem: "../assets/sal-parrilla.png",
-        categoria: "Queijos",
+        imagem: "../assets/sal_parrilha.png",
+        categoria: "Temperos",
         precoPorKg: 29.90
     },
 
@@ -123,7 +123,7 @@ const produtos = [
         id: 15,
         nome: "Chuchu",
         descricao: "Chuchu verde claro, leve e saudável.",
-        imagem: "../assets/xuxu.png",
+        imagem: "../assets/chuchu.png",
         categoria: "Frutas e Verduras",
         precoPorKg: 4.90
     },
@@ -141,16 +141,16 @@ const produtos = [
         id: 17,
         nome: "Pão de Fermentação Natural",
         descricao: "Pão artesanal com longa fermentação.",
-        imagem: "../assets/pao-natural.png",
-        categoria: "Frutas e Verduras",
+        imagem: "../assets/pao_fermentado.png",
+        categoria: "Padaria",
         precoFixo: 12.90
     },
     {
         id: 18,
         nome: "Baguete Italiana",
         descricao: "Baguete crocante ao estilo italiano.",
-        imagem: "../assets/baguete.png",
-        categoria: "Frutas e Verduras",
+        imagem: "../assets/baguette.png",
+        categoria: "Padaria",
         precoFixo: 11.90
     },
     {
@@ -158,15 +158,15 @@ const produtos = [
         nome: "Ciabatta",
         descricao: "Pão rústico com casca crocante.",
         imagem: "../assets/ciabatta.png",
-        categoria: "Frutas e Verduras",
+        categoria: "Padaria",
         precoFixo: 7.90
     },
     {
         id: 20,
         nome: "Pão Australiano",
         descricao: "Pão escuro levemente adocicado.",
-        imagem: "../assets/australiano.png",
-        categoria: "Frutas e Verduras",
+        imagem: "../assets/pao_australiano.png",
+        categoria: "Padaria",
         precoFixo: 7.90
     }
 ];
