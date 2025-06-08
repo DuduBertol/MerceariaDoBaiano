@@ -2,7 +2,7 @@ const produtos = [
     // LISTA DOS DEFUMADOS - EMBUTIDOS
     {
         id: 1,
-        nome: "Salame Defumado",
+        nome: "Salame Defumado - R$ 95,90/kg",
         descricao: "Salame artesanal defumado com especiarias.",
         imagem: "../assets/salame.png",
         categoria: "Defumados",
@@ -10,7 +10,7 @@ const produtos = [
     },
     {
         id: 2,
-        nome: "Bacon Defumado",
+        nome: "Bacon Defumado - R$ 46,90/kg",
         descricao: "Bacon defumado crocante e saboroso.",
         imagem: "../assets/bacon.png",
         categoria: "Defumados",
@@ -18,7 +18,7 @@ const produtos = [
     },
     {
         id: 3,
-        nome: "Presunto Defumado",
+        nome: "Presunto Defumado - R$ 38,90/kg",
         descricao: "Presunto defumado premium.",
         imagem: "../assets/presunto.png",
         categoria: "Defumados",
@@ -36,7 +36,7 @@ const produtos = [
     // LISTA DOS DEFUMADOS - QUEIJOS
     {
         id: 5,
-        nome: "Mussarela Defumada",
+        nome: "Mussarela Defumada - R$ 54,90/kg",
         descricao: "Mussarela defumada ideal para lanches.",
         imagem: "../assets/mussarela.png",
         categoria: "Queijos",
@@ -45,7 +45,7 @@ const produtos = [
     },
     {
         id: 6,
-        nome: "Gouda Defumado",
+        nome: "Gouda Defumado - R$ 88,90/kg",
         descricao: "Gouda com toque defumado e textura cremosa.",
         imagem: "../assets/gouda.png",
         categoria: "Queijos",
@@ -53,7 +53,7 @@ const produtos = [
     },
     {
         id: 7,
-        nome: "Provolone Defumado",
+        nome: "Provolone Defumado - R$ 113,90/kg",
         descricao: "Queijo provolone defumado, sabor intenso.",
         imagem: "../assets/provolone.png",
         categoria: "Queijos",
@@ -61,7 +61,7 @@ const produtos = [
     },
     {
         id: 8,
-        nome: "Parmesão Defumado",
+        nome: "Parmesão Defumado - R$ 169,90/kg",
         descricao: "Parmesão curado com defumação natural.",
         imagem: "../assets/parmesao.png",
         categoria: "Queijos",
@@ -71,7 +71,7 @@ const produtos = [
     // LISTA DOS DEFUMADOS - TEMPEROS
     {
         id: 9,
-        nome: "Chimichurri",
+        nome: "Chimichurri - R$ 7,90/100g",
         descricao: "Tempero argentino com toque defumado.",
         imagem: "../assets/chimi.png",
         categoria: "Temperos",
@@ -79,7 +79,7 @@ const produtos = [
     },
     {
         id: 10,
-        nome: "Páprica Defumada",
+        nome: "Páprica Defumada - R$ 1,99/100g",
         descricao: "Páprica doce defumada ideal para carnes.",
         imagem: "../assets/paprica_def.png",
         categoria: "Temperos",
@@ -87,7 +87,7 @@ const produtos = [
     },
     {
         id: 11,
-        nome: "Fumaça em Pó",
+        nome: "Fumaça em Pó - R$ 2,09/100g",
         descricao: "Aromatizante defumado para churrasco e molhos.",
         imagem: "../assets/fumaca.png",
         categoria: "Temperos",
@@ -95,7 +95,7 @@ const produtos = [
     },
     {
         id: 12,
-        nome: "Sal de Parrilla Defumado",
+        nome: "Sal de Parrilla Defumado - R$ 2,99/100g",
         descricao: "Sal grosso com aroma defumado.",
         imagem: "../assets/sal_parrilha.png",
         categoria: "Temperos",
@@ -105,7 +105,7 @@ const produtos = [
     // LISTA DAS FRUTAS E VERDURAS
     {
         id: 13,
-        nome: "Tomate",
+        nome: "Tomate - R$ 7,90/kg",
         descricao: "Tomates frescos direto do campo.",
         imagem: "../assets/tomate.png",
         categoria: "Frutas e Verduras",
@@ -113,7 +113,7 @@ const produtos = [
     },
     {
         id: 14,
-        nome: "Cenoura",
+        nome: "Cenoura - R$ 6,90/kg",
         descricao: "Cenouras crocantes e nutritivas.",
         imagem: "../assets/cenoura.png",
         categoria: "Frutas e Verduras",
@@ -121,7 +121,7 @@ const produtos = [
     },
     {
         id: 15,
-        nome: "Chuchu",
+        nome: "Chuchu - R$ 4,90/kg",
         descricao: "Chuchu verde claro, leve e saudável.",
         imagem: "../assets/chuchu.png",
         categoria: "Frutas e Verduras",
@@ -129,7 +129,7 @@ const produtos = [
     },
     {
         id: 16,
-        nome: "Banana",
+        nome: "Banana - R$ 8,90/kg",
         descricao: "Bananas maduras e saborosas.",
         imagem: "../assets/banana.png",
         categoria: "Frutas e Verduras",
@@ -139,7 +139,7 @@ const produtos = [
     // LISTA DA PADARIA
     {
         id: 17,
-        nome: "Pão de Fermentação Natural",
+        nome: "Pão de Fermentação Natural - 400g",
         descricao: "Pão artesanal com longa fermentação.",
         imagem: "../assets/pao_fermentado.png",
         categoria: "Padaria",
@@ -147,7 +147,7 @@ const produtos = [
     },
     {
         id: 18,
-        nome: "Baguete Italiana",
+        nome: "Baguete Italiana - 300g",
         descricao: "Baguete crocante ao estilo italiano.",
         imagem: "../assets/baguette.png",
         categoria: "Padaria",
@@ -155,7 +155,7 @@ const produtos = [
     },
     {
         id: 19,
-        nome: "Ciabatta",
+        nome: "Ciabatta - 200g",
         descricao: "Pão rústico com casca crocante.",
         imagem: "../assets/ciabatta.png",
         categoria: "Padaria",
@@ -163,7 +163,7 @@ const produtos = [
     },
     {
         id: 20,
-        nome: "Pão Australiano",
+        nome: "Pão Australiano - 200g",
         descricao: "Pão escuro levemente adocicado.",
         imagem: "../assets/pao_australiano.png",
         categoria: "Padaria",
