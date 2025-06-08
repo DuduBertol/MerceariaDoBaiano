@@ -213,10 +213,6 @@ if (produto) {
     document.querySelector('.conteudo').innerHTML = "<p>Produto não encontrado.</p>";
 }
 
-document.getElementById("btn-voltar").addEventListener("click", function () {
-    window.location.href = "./pagina_inicial.html";
-});
-
 document.getElementById("btn-baiano").addEventListener("click", function () {
     window.location.href = "http://127.0.0.1:5000";
 });
