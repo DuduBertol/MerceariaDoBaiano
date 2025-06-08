@@ -6,8 +6,21 @@ let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
 
 function renderizarCarrinho() {
   tbody.innerHTML = '';
-
   let subtotal = 0;
+
+  if (carrinho.length === 0) {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td colspan="5" style="text-align: center; padding: 20px; font-size: 1.2rem;">
+        🛒 Vixe.. Tá faltando dendê nesse balaio, viu?!
+      </td>
+    `;
+    tbody.appendChild(tr);
+
+    subtotalSpan.textContent = 'R$0,00';
+    totalFooter.textContent = 'Total: R$0,00';
+    return; // Não renderiza mais nada
+  }
 
   carrinho.forEach((item, index) => {
     subtotal += item.total;
