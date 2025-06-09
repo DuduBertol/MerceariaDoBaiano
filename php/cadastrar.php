@@ -12,7 +12,7 @@ $email = $_GET['email'];
 $telefone = $_GET['telefone'];
 $endereco = $_GET['endereco'];
 $nascimento = $_GET['nascimento'];
-$senhaCliente = password_hash($_GET['senha'], PASSWORD_DEFAULT); // Criptografando a senha
+$senhaCliente = $_GET['senha'];
 
 $conn = mysqli_connect($host, $user, $senha, $banco);
 
