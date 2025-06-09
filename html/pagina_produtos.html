@@ -16,15 +16,11 @@
     </header>
 
     <nav>
-        <a href="#"><i class="fa-solid fa-cart-shopping"></i> Carrinho</a>
-        <a href="./pagina_produtos.html"><i class="fa-solid fa-lemon"></i> Produtos</a>
+        <a href="./pagina_inicial.html"><i class="fa-solid fa-arrow-left"></i> Voltar ao Início</a>
+        <a href="./carrinho.html"><i class="fa-solid fa-cart-shopping"></i> Carrinho</a>
         <a href="./contato.html"><i class="fa-solid fa-phone"></i> Contato</a>
         <a href="./login.html"><i class="fa-solid fa-right-from-bracket"></i> Sair</a>
     </nav>
-
-    <div class="voltar">
-        <button id="btn-voltar" class="btn-voltar"><i class="fa-solid fa-arrow-left"></i> VOLTAR</button>
-    </div>
 
     <div class="conteudo-container">
         <div class="conteudo">
@@ -42,11 +38,10 @@
                     <button type="button" class="btn-calcular-preco" id="calcularPreco">Calcular preço</button>
                 </div>
                 <p class="preco-kg"></p>
-                <button class="btn-comprar" type="submit">Comprar</button>
-                <div class="baiano-IA">
-                    <p class="titulo-baiano-IA">Saiba mais sobre esse produto com a nossa Inteligência Artificial!</p>
-                    <button id="btn-baiano" class="btn-baiano"><i class="fa-solid fa-microchip"></i> Saiba mais!</button>
-                    <p class="p-baiano-IA">...</p>
+                <button class="btn-comprar" type="submit" id="btn-comprar"><i class="fa-solid fa-basket-shopping"></i> Adicionar ao Balaio</button>
+                <div class="baiano-IA" style="display: none;">
+                    <p class="titulo-baiano-IA">Saiba mais sobre frutas e verduras com a nossa Inteligência Artificial!</p>
+                    <button id="btn-baiano" class="btn-baiano"><i class="fa-solid fa-microchip"></i> Acessar o ChatVGT!</button>
                 </div>
             </div>
         </div>
