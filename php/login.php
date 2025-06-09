@@ -6,29 +6,33 @@ $banco = "MerceariaDoBaiano";
 
 $conn = mysqli_connect($host, $user, $senha, $banco);
 
-if (!$conn) {
-    die("Erro na conexão: " . mysqli_connect_error());
-}
-
-// Recebe os dados
-$login = $_POST['user'];
+$email = $_POST['email'];
 $senhaDigitada = $_POST['pass'];
 
-// Busca pelo nome OU email
-$query = "SELECT * FROM clientes WHERE nome = '$login' OR email = '$login'";
+$query = "SELECT * FROM clientes WHERE email = '$email'";
 $resultado = mysqli_query($conn, $query);
 
 if (mysqli_num_rows($resultado) === 1) {
     $usuario = mysqli_fetch_assoc($resultado);
-    
-    // Verifica a senha
-    if (password_verify($senhaDigitada, $usuario['senha'])) {
-        echo "sucesso";
+
+    if ($senhaDigitada === $usuario['senha']) { // ou use password_verify se for hash
+        // Login OK, retorna JSON com sucesso e cliente_id
+        echo json_encode([
+            'success' => true,
+            'cliente_id' => $usuario['id'],
+            'message' => 'Logado com sucesso!'
+        ]);
     } else {
-        echo "Senha incorreta!";
+        echo json_encode([
+            'success' => false,
+            'message' => 'Senha incorreta!'
+        ]);
     }
 } else {
-    echo "Usuário não encontrado!";
+    echo json_encode([
+        'success' => false,
+        'message' => 'E-mail não encontrado!'
+    ]);
 }
 
 mysqli_close($conn);
