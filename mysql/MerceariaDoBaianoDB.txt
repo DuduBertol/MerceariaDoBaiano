@@ -1,0 +1,74 @@
+CREATE DATABASE IF NOT EXISTS MerceariaDoBaiano;
+
+USE MerceariaDoBaiano;
+
+CREATE TABLE clientes (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(255) NOT NULL,
+    sobrenome VARCHAR(255) NOT NULL,
+    cpf VARCHAR(11) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    telefone VARCHAR(11) NOT NULL,
+    endereco VARCHAR(255) NOT NULL,
+    data_nasc DATE NOT NULL,
+    senha VARCHAR(20) NOT NULL,
+    PRIMARY KEY (id),
+    UNIQUE KEY uni_cpf (cpf),
+    UNIQUE KEY uni_email (email),
+    UNIQUE KEY uni_telefone (telefone)
+);
+
+CREATE TABLE vendas (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    cliente_id INT(11) NOT NULL,
+    data_venda DATETIME NOT NULL DEFAULT current_timestamp(),
+    total DECIMAL(10, 2) NOT NULL,
+    PRIMARY KEY (id),
+    KEY idx_cliente_id (cliente_id),
+    FOREIGN KEY (cliente_id) REFERENCES clientes(id)
+);
+
+CREATE TABLE produtos (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    nome VARCHAR(255) NOT NULL,
+    categoria VARCHAR(20) DEFAULT NULL,
+    preco FLOAT NOT NULL,
+    peso FLOAT NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE itens_venda (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    venda_id INT(11) NOT NULL,
+    produto_id INT(11) NOT NULL,
+    quantidade DECIMAL(10, 3) NOT NULL,
+    preco_unitario DECIMAL(10, 2) NOT NULL,
+    subtotal DECIMAL(10, 2) AS (quantidade * preco_unitario) STORED,
+    PRIMARY KEY (id),
+    KEY idx_venda_id (venda_id),
+    KEY idx_produto_id (produto_id),
+    FOREIGN KEY (venda_id) REFERENCES vendas(id),
+    FOREIGN KEY (produto_id) REFERENCES produtos(id)
+);
+
+INSERT INTO produtos (id, nome, categoria, preco, peso) VALUES
+(1, 'Salame', 'Defumados', 95.90, 0),
+(2, 'Bacon Defumado', 'Defumados', 46.90, 0),
+(3, 'Presunto', 'Defumados', 38.90, 0),
+(4, 'Linguiça', 'Defumados', 12.90, 0.4),
+(5, 'Mussarela', 'Queijos', 54.90, 0),
+(6, 'Gouda', 'Queijos', 88.90, 0),
+(7, 'Provolone', 'Queijos', 113.90, 0),
+(8, 'Parmesão', 'Queijos', 169.90, 0),
+(9, 'Chimichurri', 'Temperos', 7.90, 0.1),
+(10, 'Páprica defumada', 'Temperos', 1.99, 0.1),
+(11, 'Fumaça em pó', 'Temperos', 2.09, 0.1),
+(12, 'Sal de Parrilha', 'Temperos', 2.99, 0.1),
+(13, 'Tomate', 'Frutas e verduras', 7.90, 0),
+(14, 'Cenoura', 'Frutas e verduras', 6.90, 0),
+(15, 'Chuchu', 'Frutas e verduras', 4.90, 0),
+(16, 'Banana', 'Frutas e verduras', 8.90, 0),
+(17, 'Pão Natural', 'Padaria', 12.90, 0.4),
+(18, 'Baguette Italiano', 'Padaria', 11.90, 0.3),
+(19, 'Ciabatta', 'Padaria', 7.90, 0.2),
+(20, 'Pão Australiano', 'Padaria', 7.90, 0.2);
